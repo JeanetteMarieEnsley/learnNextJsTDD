@@ -25,9 +25,11 @@ describe("Home page", () => {
     );
     expect(paragraphText.textContent).toBe(paragraphMessage);
   });
-  it("Should have a button on page", () => {
+  it("Should display button on home page with a link", () => {
     render(<Home />);
     const button = screen.getByRole("button", { name: "Pick your Quest" });
+    const link = screen.getByRole("link", { name: "Pick your Quest" });
     expect(button).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/portfolio')
   });
 });

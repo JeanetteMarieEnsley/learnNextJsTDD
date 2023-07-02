@@ -39,12 +39,4 @@
   font-weight: 300;
 }
 
-.button {
-  padding: 20px;
-  cursor: pointer;
-  background-color: #219c92;
-  border: none;
-  border-radius: 5px;
-  width: max-content;
-  color: white;
-}
+

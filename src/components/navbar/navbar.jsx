@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import style from "./navbar.module.css";
 
 const Navbar = () => {
   const links = [
@@ -31,14 +32,20 @@ const Navbar = () => {
   ];
 
   return (
-    <div>
-      {links.map((link) => {
-        return (
-          <Link key={link.id} href={link.href}>
-            {link.text}
-          </Link>
-        );
-      })}
+    <div className={style.container}>
+      <Link href="/" className={style.logo}>
+        Enchanted Docs
+      </Link>
+      <div className={style.links}>
+        {links.map((link) => {
+          return (
+            <Link key={link.id} href={link.href} className={style.link}>
+              {link.text}
+            </Link>
+          );
+        })}
+        <button className={style.logout}>Logout</button>
+      </div>
     </div>
   );
 };

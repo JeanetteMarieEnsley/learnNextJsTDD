@@ -1,4 +1,4 @@
-import Navbar from "../../../components/navbar/navbar";
+import Navbar from "../../../src/components/navbar/navbar";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import React from "react";
@@ -39,5 +39,15 @@ describe("navbar", () => {
 
     expect(contact).toBeInTheDocument();
     expect(contact).toHaveAttribute("href", "/contact");
+  });
+  it("should have a logo that takes you to the home page", () => {
+    render(<Navbar />);
+    const logo = screen.queryByRole("link", { name: "Enchanted Docs" });
+    expect(logo).toBeInTheDocument();
+  });
+  it("should have a button to logout", () => {
+    render(<Navbar />);
+    const button = screen.getByRole("button", { name: "Logout" });
+    expect(button).toBeInTheDocument();
   });
 });

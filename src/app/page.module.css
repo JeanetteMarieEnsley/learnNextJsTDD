@@ -34,17 +34,16 @@
   }
 }
 
-
 .desc {
   font-size: 24px;
   font-weight: 300;
 }
 
-.button{
+.button {
   padding: 20px;
-  cursor:pointer;
+  cursor: pointer;
   background-color: #219c92;
-  border:none;
+  border: none;
   border-radius: 5px;
   width: max-content;
   color: white;

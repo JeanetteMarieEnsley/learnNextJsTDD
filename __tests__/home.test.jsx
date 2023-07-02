@@ -7,25 +7,27 @@ describe("Home page", () => {
   it("Should display home page image", () => {
     render(<Home />);
 
-    const image = screen.queryByRole('img', {name: 'enchanted book'})
-    expect(image).toBeInTheDocument()
+    const image = screen.queryByRole("img", { name: "enchanted book" });
+    expect(image).toBeInTheDocument();
   });
 
   it("Should contain heading for the home page", () => {
-    render(<Home />)
+    render(<Home />);
 
-    const heading = screen.getByRole('heading', {name: 'Hello Adventurer'})
-    expect(heading).toBeInTheDocument()
-  })
+    const heading = screen.getByRole("heading", { name: "Hello Adventurer" });
+    expect(heading).toBeInTheDocument();
+  });
   it("Should contain paragraph description for the home page", () => {
-    render(<Home />)
-    const paragraphMessage = `Are you ready to embark on your quest for Knowledge? Pick a path to follow and make sure to add your findings. Together we can level up our programming skills and rise up the ranks.`
-    const paragraphText = screen.getByText((text) => text.startsWith('Are you ready'))
-    expect(paragraphText.textContent).toBe(paragraphMessage)
-  })
+    render(<Home />);
+    const paragraphMessage = `Are you ready to embark on your quest for Knowledge? Pick a path to follow and make sure to add your findings. Together we can level up our programming skills and rise up the ranks.`;
+    const paragraphText = screen.getByText((text) =>
+      text.startsWith("Are you ready")
+    );
+    expect(paragraphText.textContent).toBe(paragraphMessage);
+  });
   it("Should have a button on page", () => {
-    render(<Home />)
-    const button = screen.getByRole('button', {name: 'Pick your Quest'})
-    expect(button).toBeInTheDocument()
-  })
+    render(<Home />);
+    const button = screen.getByRole("button", { name: "Pick your Quest" });
+    expect(button).toBeInTheDocument();
+  });
 });

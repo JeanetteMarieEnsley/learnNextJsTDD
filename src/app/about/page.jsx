@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import education from "../../../public/about_banner.png";
 import style from "./page.module.css";
-import Button from "../../components/button/button"
+import Button from "../../components/button/button";
 
 const About = () => {
   const contents = [
@@ -38,7 +38,7 @@ const About = () => {
             </div>
           );
         })}
-      <Button url='/contact' text='Contact' />
+        <Button url="/contact" text="Contact" />
       </div>
     </div>
   );

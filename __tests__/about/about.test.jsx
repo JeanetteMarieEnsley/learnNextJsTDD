@@ -44,6 +44,6 @@ describe("about page", () => {
 
     //Assert
     expect(button).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/contact')
+    expect(link).toHaveAttribute("href", "/contact");
   });
 });

@@ -30,6 +30,6 @@ describe("Home page", () => {
     const button = screen.getByRole("button", { name: "Pick your Quest" });
     const link = screen.getByRole("link", { name: "Pick your Quest" });
     expect(button).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/portfolio')
+    expect(link).toHaveAttribute("href", "/portfolio");
   });
 });

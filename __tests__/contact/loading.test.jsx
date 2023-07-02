@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import React from "react";
-import Dashboard from "../../src/app/dashboard/page";
+import Loading from "../../src/app/contact/loading";
 
-describe("Dashboard", () => {
+describe("Loading", () => {
   it("Should render", () => {
-    render(<Dashboard />);
+    render(<Loading />);
   });
 });

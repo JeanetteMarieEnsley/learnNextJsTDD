@@ -40,6 +40,13 @@ describe("navbar", () => {
     expect(contact).toBeInTheDocument();
     expect(contact).toHaveAttribute("href", "/contact");
   });
+  it("should have dashboard link and display text", () => {
+    render(<Navbar />);
+    const dashboard = screen.queryByRole("link", { name: "Dashboard" });
+
+    expect(dashboard).toBeInTheDocument();
+    expect(dashboard).toHaveAttribute("href", "/dashboard");
+  });
   it("should have a logo that takes you to the home page", () => {
     render(<Navbar />);
     const logo = screen.queryByRole("link", { name: "Enchanted Docs" });

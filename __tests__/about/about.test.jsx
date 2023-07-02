@@ -34,5 +34,4 @@ describe("about page", () => {
     //Assert
     expect(content).toBeInTheDocument();
   });
-  
 });

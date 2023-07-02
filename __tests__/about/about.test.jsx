@@ -34,16 +34,5 @@ describe("about page", () => {
     //Assert
     expect(content).toBeInTheDocument();
   });
-  it("Should display button with link to the contact page", () => {
-    //Arrange
-    render(<About />);
-
-    //Act
-    const button = screen.getByRole("button", { name: "Contact" });
-    const link = screen.getByRole("link", { name: "Contact" });
-
-    //Assert
-    expect(button).toBeInTheDocument();
-    expect(link).toHaveAttribute("href", "/contact");
-  });
+  
 });

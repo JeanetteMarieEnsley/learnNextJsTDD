@@ -38,7 +38,6 @@ const About = () => {
             </div>
           );
         })}
-        <Button url="/contact" text="Contact" />
       </div>
     </div>
   );

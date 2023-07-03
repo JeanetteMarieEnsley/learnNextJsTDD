@@ -11,8 +11,8 @@ const Navbar = () => {
     },
     {
       id: 2,
-      text: "Portfolio",
-      href: "/portfolio",
+      text: "Quest",
+      href: "/quest",
     },
     {
       id: 3,

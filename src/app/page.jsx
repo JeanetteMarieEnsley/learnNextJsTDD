@@ -14,7 +14,7 @@ export default function Home() {
           follow and make sure to add your findings. Together we can level up
           our programming skills and rise up the ranks.
         </p>
-        <Button url="/portfolio" text="Pick your Quest" />
+        <Button url="/quest" text="Pick your Quest" />
       </div>
       <div className={style.item}>
         <Image

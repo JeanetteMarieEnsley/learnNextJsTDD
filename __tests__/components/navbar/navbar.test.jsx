@@ -11,12 +11,12 @@ describe("navbar", () => {
     expect(home).toBeInTheDocument();
     expect(home).toHaveAttribute("href", "/");
   });
-  it("should have portfolio link and display text", () => {
+  it("should have quest link and display text", () => {
     render(<Navbar />);
-    const portfolio = screen.queryByRole("link", { name: "Portfolio" });
+    const quest = screen.queryByRole("link", { name: "Quest" });
 
-    expect(portfolio).toBeInTheDocument();
-    expect(portfolio).toHaveAttribute("href", "/portfolio");
+    expect(quest).toBeInTheDocument();
+    expect(quest).toHaveAttribute("href", "/quest");
   });
   it("should have blog link and display text", () => {
     render(<Navbar />);

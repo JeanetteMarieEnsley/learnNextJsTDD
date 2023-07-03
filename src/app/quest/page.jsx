@@ -45,6 +45,7 @@ const Quest = () => {
             <Link
               style={{ backgroundImage: `url(${quest.url})` }}
               href={quest.href}
+              key={quest.id}
               className={style.item}
             >
               <div className={style.title}>{quest.title}</div>

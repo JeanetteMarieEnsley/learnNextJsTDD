@@ -3,12 +3,28 @@ import style from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Blog = () => {
+// TODO: add test for data function
+async function getData() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    cache: 'no-store',
+  });
+
+  if(!res.ok) {
+    throw new Error('failed to fetch data')
+  }
+
+  return res.json();
+}
+
+const Blog = async () => {
+  const data = await getData()
   return (
     <div className={style.mainContainer}>
+      {data.map((item) => (
       <Link
+        key={item.id}
         data-testid="blog_link"
-        href="/blog/testid"
+        href="/blog/1cloud."
         className={style.container}
       >
         <div className={style.imageContainer}>
@@ -21,15 +37,14 @@ const Blog = () => {
           />
         </div>
         <div className={style.content}>
-          <h1 className={style.title}>Being productive during the workday</h1>
-          <p className={style.desc}>
-            Sticky notes are everywhere, but I think I got most of the todos
-            done
-          </p>
+          <h1 className={style.title}>{item.title}</h1>
+          <p className={style.desc}>{item.body}</p>
         </div>
       </Link>
 
-      <Link href="#" className={style.container}>
+      ))}
+
+      {/* <Link href="#" className={style.container}>
         <div className={style.imageContainer}>
           <Image
             src="/corgi.png"
@@ -46,7 +61,7 @@ const Blog = () => {
             You're most likely wondering how we got here.
           </p>
         </div>
-      </Link>
+      </Link> */}
     </div>
   );
 };

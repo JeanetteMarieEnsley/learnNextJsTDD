@@ -1,13 +1,28 @@
 import React from "react";
 import style from "./page.module.css";
 import Image from "next/image";
+import { notFound } from 'next/navigation'
 
-const BlogPost = () => {
+async function getData(id) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+    cache: 'no-store',
+  });
+
+  if(!res.ok) {
+    return notFound();
+  }
+
+  return res.json();
+}
+// TODO: add test for new data fetching with params being for id
+
+const BlogPost = async ({params}) => {
+  const data = await getData(params.id)
   return (
     <div className={style.container}>
       <div className={style.top}>
         <div className={style.info}>
-          <h1 className={style.title}> Being productive during the workday</h1>
+          <h1 className={style.title}> {data.title}</h1>
           <p className={style.desc}>
             This is a fake blog post. Nothing to see here. yet. Anyways this is
             a description.

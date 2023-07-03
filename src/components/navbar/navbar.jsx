@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import style from "./navbar.module.css";
-// import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
+import DarkModeToggle from "../darkModeToggle/DarkModeToggle";
 const Navbar = () => {
   const links = [
     {
@@ -42,7 +42,7 @@ const Navbar = () => {
         Enchanted Docs
       </Link>
       <div className={style.links}>
-        {/* <DarkModeToggle /> */}
+        <DarkModeToggle />
         {links.map((link) => {
           return (
             <Link key={link.id} href={link.href} className={style.link}>

@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./page.module.css";
 import Link from "next/link";
-import frontend_image from "../../../public/frontend.png";
 
 const Quest = () => {
   const quests = [

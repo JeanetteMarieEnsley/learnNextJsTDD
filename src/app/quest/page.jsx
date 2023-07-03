@@ -20,7 +20,7 @@ const Quest = () => {
       id: 3,
       href: "/quest/testing",
       title: "Testing Quest",
-      url: "/testing.png",
+      url: "/computer.png",
     },
     {
       id: 4,
@@ -47,7 +47,7 @@ const Quest = () => {
               href={quest.href}
               className={style.item}
             >
-              <span className={style.title}>{quest.title}</span>
+              <div className={style.title}>{quest.title}</div>
             </Link>
           );
         })}

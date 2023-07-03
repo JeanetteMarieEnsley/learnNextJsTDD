@@ -17,7 +17,8 @@
   width: 300px;
   height: 400px;
   position: relative;
-  background-size: cover !important;
+  background-size: cover;
+  background-repeat: none;
   background-position: center;
 }
 
@@ -27,6 +28,8 @@
   bottom: 10px;
   font-size: 40px;
   font-weight: bold;
+  opacity: 100%;
+  color: #56d3be;
 }
 
 .item:hover .title {

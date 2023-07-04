@@ -99,6 +99,7 @@ const Dashboard = () => {
                   </div>
                   <h2 className={styles.postTitle}>{post.title}</h2>
                   <span
+                  data-cy='delete_post'
                     className={styles.delete}
                     onClick={() => handleDelete(post._id)}
                   >
@@ -109,16 +110,17 @@ const Dashboard = () => {
         </div>
         <form className={styles.new} onSubmit={handleSubmit}>
           <h1>Add New Post</h1>
-          <input type="text" placeholder="Title" className={styles.input} />
-          <input type="text" placeholder="Desc" className={styles.input} />
-          <input type="text" placeholder="Image" className={styles.input} />
+          <input type="text" data-cy='blog_title' placeholder="Title" className={styles.input} />
+          <input type="text" data-cy='blog_desc' placeholder="Desc" className={styles.input} />
+          <input type="text" data-cy='blog_image' placeholder="Image" className={styles.input} />
           <textarea
             placeholder="Content"
+            data-cy='blog_content'
             className={styles.textArea}
             cols="30"
             rows="10"
           ></textarea>
-          <button className={styles.button}>Send</button>
+          <button data-cy='post_blog' className={styles.button}>Send</button>
         </form>
       </div>
     );

@@ -7,17 +7,26 @@ import { SessionProvider } from "next-auth/react";
 import {useSession} from "next-auth/react";
 
 vi.mock("./next-auth/react", () => {
+  render(
+    <AuthProvider>{children}</AuthProvider>
   
+  );
   const mockSession = {
-    expires: new Date(Date.now() + 2 * 86400).toISOString(),
-    user: { username: "admin" }
-  };
+      user: {
+          name: 'test',
+          email: 'test@gmail.com',
+          image: 'image'
+      },
+  
+}
   return {
-    __esModule: true,
     useSession: vi.fn(() => {
-      return {data: mockSession, status: 'authenticated'}  // return type is [] in v3 but changed to {} in v4
+      return {data: mockSession, status: 'authenticated'
+    }  
     }),
+    
   };
+  
 });
 
 

@@ -51,7 +51,7 @@ const Navbar = () => {
         <DarkModeToggle />
         {links.map((link) => {
           return (
-            <Link key={link.id} href={link.href} className={style.link}>
+            <Link data-cy="nav_link" key={link.id} href={link.href} className={style.link}>
               {link.text}
             </Link>
           );

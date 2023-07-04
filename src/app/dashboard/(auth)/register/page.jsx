@@ -40,22 +40,25 @@ const Register = () => {
         <input
           type="text"
           placeholder="Username"
+          data-cy="username"
           required
           className={styles.input}
         />
         <input
           type="text"
           placeholder="Email"
+          data-cy="email"
           required
           className={styles.input}
         />
         <input
           type="password"
           placeholder="Password"
+          data-cy="password"
           required
           className={styles.input}
         />
-        <button className={styles.button}>Register</button>
+        <button className={styles.button} data-cy="register_button">Register</button>
         {error && "Something went wrong!"}
       </form>
       <span className={styles.or}>- OR -</span>

@@ -45,16 +45,18 @@ const Login = ({ url }) => {
         <input
           type="text"
           placeholder="Email"
+          data-cy="email"
           required
           className={styles.input}
         />
         <input
           type="password"
+          data-cy="password"
           placeholder="Password"
           required
           className={styles.input}
         />
-        <button className={styles.button}>Login</button>
+        <button data-cy="login_button" className={styles.button}>Login</button>
         {error && error}
       </form>
       <span className={styles.or}>- OR -</span>
